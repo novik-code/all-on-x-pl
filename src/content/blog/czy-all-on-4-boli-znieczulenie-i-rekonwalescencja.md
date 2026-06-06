@@ -1,7 +1,7 @@
 ---
 title: 'Czy All-on-4 boli? Znieczulenie, ból po zabiegu i rekonwalescencja'
 description: 'Czy zabieg All-on-4 boli — jak wygląda znieczulenie, co czuć w trakcie, ból po zabiegu i ile trwa rekonwalescencja. Realne informacje bez koloryzowania. Przewodnik dr Nowosielskiego, M.Sc.'
-pubDate: 2026-05-24
+pubDate: 2026-05-16
 category: pytania-i-watpliwosci
 tags: [all-on-4, bol, znieczulenie, rekonwalescencja, obawy]
 draft: false

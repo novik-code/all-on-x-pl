@@ -1,7 +1,7 @@
 ---
 title: 'Cena All-on-4 — co realnie wpływa na koszt (zwłaszcza materiał mostu)'
 description: 'Od czego zależy cena All-on-4 — liczba implantów, materiał mostu (akryl/kompozyt vs cyrkon), augmentacja, diagnostyka. Dlaczego dwie wyceny potrafią się różnić i o co pytać. Przewodnik dr Nowosielskiego, M.Sc.'
-pubDate: 2026-06-04
+pubDate: 2026-05-28
 category: cena-i-koszt
 tags: [all-on-4, cena, material-mostu, cyrkon, koszt]
 draft: false

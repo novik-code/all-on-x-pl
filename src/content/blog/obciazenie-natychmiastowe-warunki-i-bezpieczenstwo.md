@@ -1,7 +1,7 @@
 ---
 title: 'Obciążenie natychmiastowe — warunki, bezpieczeństwo, kiedy się nie da'
 description: 'Obciążenie natychmiastowe w All-on-4/All-on-6 — od czego zależy, kiedy jest bezpieczne, a kiedy lepiej odroczyć. Stabilizacja pierwotna, jakość kości, decyzja kliniczna. Przewodnik dr Nowosielskiego, M.Sc.'
-pubDate: 2026-06-01
+pubDate: 2026-05-24
 category: zeby-w-jeden-dzien
 tags: [obciazenie-natychmiastowe, stabilizacja-pierwotna, bezpieczenstwo, all-on-4]
 draft: false

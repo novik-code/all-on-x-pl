@@ -1,7 +1,7 @@
 ---
 title: 'Ile trwa leczenie All-on-4? Etapy i realny harmonogram'
 description: 'Ile trwa leczenie All-on-4 — od konsultacji, przez dzień zabiegu z zębami tymczasowymi, po most docelowy. Realny harmonogram krok po kroku i co wpływa na czas. Przewodnik dr Nowosielskiego, M.Sc.'
-pubDate: 2026-05-20
+pubDate: 2026-05-12
 category: all-on-4
 tags: [all-on-4, czas-leczenia, etapy, harmonogram]
 draft: false

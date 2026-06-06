@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+import { getCollection } from 'astro:content';
+import { categoryMeta, formatDate } from '../utils/categories';
+
+const allPosts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const latestPosts = allPosts.slice(0, 4);
+---
+
+<BaseLayout>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">All-on-4 · All-on-6 · All-on-X · cała Polska</p>
+      <h1>Stałe zęby na implantach — nowy uśmiech w jeden dzień</h1>
+      <p class="lead">
+        Bezzębie albo zniszczone uzębienie nie muszą oznaczać ruchomej protezy.
+        <strong>All-on-4 i All-on-6</strong> to stały most na implantach dla całego łuku —
+        a dzięki <strong>obciążeniu natychmiastowemu</strong> często wychodzisz z gabinetu
+        <strong>ze stałymi zębami tego samego dnia</strong>. Niezależny przewodnik pacjenta
+        przygotowuje <strong>{site.author.honorificPrefix} {site.author.name}, {site.author.honorificSuffix} RWTH Aachen</strong> —
+        implantolog, autor książki <em>„Własny gabinet"</em>. Leczenie w klinice
+        <a href={site.clinic.url} rel="noopener">Mikrostomart</a> (pacjenci z całej Polski).
+      </p>
+      <div class="hero-cta">
+        <a class="btn-primary" href={site.clinic.bookingUrl} rel="noopener">Bezpłatna konsultacja →</a>
+        <a class="btn-outline" href="/all-on-x">Czym jest All-on-X</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="intro-grid">
+      <article class="pillar">
+        <h3>All-on-4 — 4 implanty, cały łuk</h3>
+        <p>Stały most podparty na 4 implantach (2 proste + 2 pochylone). Sprawdzony protokół, często z zębami tymczasowymi tego samego dnia.</p>
+        <a href="/all-on-4">All-on-4 w szczegółach →</a>
+      </article>
+      <article class="pillar">
+        <h3>All-on-6 — 6 implantów, więcej stabilności</h3>
+        <p>Lepsze rozłożenie sił i bufor bezpieczeństwa — szczególnie w szczęce i przy silnym zgryzie. Kiedy 6 ma przewagę nad 4.</p>
+        <a href="/all-on-6">All-on-6 w szczegółach →</a>
+      </article>
+      <article class="pillar">
+        <h3>Zęby w jeden dzień</h3>
+        <p>Obciążenie natychmiastowe — jak to możliwe, dla kogo, i co realnie dzieje się w „tym jednym dniu".</p>
+        <a href="/zeby-w-jeden-dzien">Zęby w jeden dzień →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2>Najważniejsze tematy</h2>
+    <div class="pillar-grid">
+      <a href="/all-on-x" class="pillar">
+        <span class="pillar-num">01</span>
+        <h3>All-on-X — co to jest</h3>
+        <p>Pojęcie zbiorcze i porównanie wariantów: All-on-4 vs All-on-6 vs proteza vs most.</p>
+      </a>
+      <a href="/all-on-4" class="pillar">
+        <span class="pillar-num">02</span>
+        <h3>All-on-4</h3>
+        <p>Cały łuk na 4 implantach — wskazania, przebieg, obciążenie natychmiastowe, trwałość.</p>
+      </a>
+      <a href="/all-on-6" class="pillar">
+        <span class="pillar-num">03</span>
+        <h3>All-on-6</h3>
+        <p>6 implantów — większa stabilność i rozłożenie obciążeń. Dla kogo lepszy wybór.</p>
+      </a>
+      <a href="/zeby-w-jeden-dzien" class="pillar">
+        <span class="pillar-num">04</span>
+        <h3>Zęby w jeden dzień</h3>
+        <p>Protokół obciążenia natychmiastowego — warunki, korzyści, czego się spodziewać.</p>
+      </a>
+      <a href="/cennik" class="pillar">
+        <span class="pillar-num">05</span>
+        <h3>Cennik All-on-4 / All-on-6</h3>
+        <p>Co składa się na cenę, od czego zależy, dlaczego warianty różnią się kosztem.</p>
+      </a>
+      <a href="/o-autorze" class="pillar">
+        <span class="pillar-num">06</span>
+        <h3>O autorze</h3>
+        <p>Dr Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog, autor książki branżowej.</p>
+      </a>
+    </div>
+  </section>
+
+  {latestPosts.length > 0 && (
+    <section class="container">
+      <header class="section-header">
+        <h2>Najnowsze artykuły</h2>
+        <a class="see-all" href="/blog">Wszystkie →</a>
+      </header>
+      <ul class="post-grid">
+        {latestPosts.map((post) => (
+          <li>
+            <article>
+              <p class="post-meta">
+                <span class="category">{categoryMeta[post.data.category].label}</span>
+                <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+              </p>
+              <h3><a href={`/blog/${post.id}`}>{post.data.title}</a></h3>
+              <p>{post.data.description}</p>
+            </article>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Bezpłatna konsultacja — sprawdź, czy kwalifikujesz się do All-on-4 / All-on-6</h2>
+      <p>
+        Prześlij zdjęcie pantomograficzne (lub przyjedź na CBCT) — ocenimy ilość kości,
+        zaproponujemy wariant (All-on-4 / All-on-6), realny termin i koszt.
+        Pacjentów przyjmujemy <strong>z całej Polski</strong> w klinice Mikrostomart.
+      </p>
+      <a class="btn-primary" href={site.clinic.bookingUrl} rel="noopener">Umów bezpłatną konsultację →</a>
+    </div>
+  </section>
+</BaseLayout>

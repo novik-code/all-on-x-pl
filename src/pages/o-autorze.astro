@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="O autorze — dr Marcin Nowosielski, M.Sc. RWTH Aachen"
+  description="Dr Marcin Nowosielski — lekarz dentysta, implantolog, M.Sc. RWTH Aachen, autor książki „Własny gabinet” (Czelej 2024). Autor przewodnika o All-on-4 / All-on-6. Leczenie w klinice Mikrostomart."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">O autorze</p>
+      <h1>{site.author.honorificPrefix} {site.author.name}, {site.author.honorificSuffix}</h1>
+      <p class="lead">
+        Lekarz dentysta, implantolog, <strong>M.Sc. RWTH Aachen</strong> — autor i redaktor
+        merytoryczny tego przewodnika o stałych zębach na implantach.
+      </p>
+    </div>
+  </section>
+
+  <section class="container prose">
+    <h2>Kwalifikacje i doświadczenie</h2>
+    <ul>
+      <li><strong>M.Sc. RWTH Aachen</strong> (2021, z wyróżnieniem) — jeden z nielicznych w Polsce z tym tytułem,</li>
+      <li><strong>implantolog</strong> — implanty pojedyncze i odbudowy pełnołukowe (All-on-4 / All-on-6),</li>
+      <li>wykładowca <strong>LA&amp;HA Symposium</strong> (Słowenia 2019, 2023; Polska 2022),</li>
+      <li>autor książki <em>„Własny gabinet"</em> (Czelej 2024),</li>
+      <li>biegła znajomość <strong>języka niemieckiego i angielskiego</strong> (pacjenci zagraniczni).</li>
+    </ul>
+
+    <h2>Podejście do leczenia</h2>
+    <p>
+      Diagnostyka oparta na <strong>CBCT i cyfrowym planowaniu</strong>, uczciwa kwalifikacja
+      (również wtedy, gdy lepszym wyborem jest inny wariant niż oczekiwany), i
+      <strong>nowoczesne protokoły</strong> — w tym obciążenie natychmiastowe tam, gdzie jest
+      bezpieczne. Celem jest trwały wynik, nie najszybsza sprzedaż zabiegu.
+    </p>
+
+    <h2>Gdzie prowadzę leczenie</h2>
+    <p>
+      Konsultacje, planowanie i leczenie All-on-4 / All-on-6 prowadzę w klinice
+      <a href={site.clinic.url} rel="noopener">Mikrostomart</a> w Opolu — z pełnym zapleczem
+      diagnostycznym (CBCT, mikroskop). <strong>Przyjmuję pacjentów z całej Polski</strong>;
+      konsultację można rozpocząć zdalnie, przesyłając pantomogram.
+    </p>
+
+    <h2>Więcej</h2>
+    <ul>
+      <li><a href="https://nowosielski.pl" rel="noopener">Blog osobisty — nowosielski.pl</a></li>
+      <li><a href="https://implantologia.opole.pl" rel="noopener">Implantologia — przewodnik</a></li>
+      <li><a href="https://implant.opole.pl" rel="noopener">Implanty zębów — przewodnik</a></li>
+      <li><a href="https://czelej.com.pl/sklep/wlasny-gabinet-poradnik/" rel="noopener">Książka „Własny gabinet"</a></li>
+    </ul>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Umów bezpłatną konsultację</h2>
+      <p>
+        Chcesz wiedzieć, czy kwalifikujesz się do All-on-4 / All-on-6? Prześlij pantomogram
+        lub umów CBCT — ocenię sytuację i przedstawię plan z wariantami i kosztem.
+      </p>
+      <a class="btn-primary" href={site.clinic.bookingUrl} rel="noopener">Umów konsultację w Mikrostomart →</a>
+    </div>
+  </section>
+</BaseLayout>

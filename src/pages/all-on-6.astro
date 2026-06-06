@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="All-on-6 — cały łuk zębów na 6 implantach"
+  description="All-on-6 — stały most na 6 implantach. Większa stabilność i rozłożenie sił niż All-on-4. Dla kogo, kiedy 6 implantów ma przewagę, przebieg, trwałość, koszt. Przewodnik dr Marcina Nowosielskiego, M.Sc."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Przewodnik · All-on-6</p>
+      <h1>All-on-6 — większa stabilność całego łuku</h1>
+      <p class="lead">
+        All-on-6 to odbudowa całego łuku na <strong>sześciu implantach</strong>.
+        Więcej punktów podparcia oznacza <strong>lepsze rozłożenie sił żucia</strong>
+        i bufor bezpieczeństwa — szczególnie w szczęce i przy silnym zgryzie.
+      </p>
+      <div class="hero-cta">
+        <a class="btn-primary" href={site.clinic.bookingUrl} rel="noopener">Bezpłatna konsultacja →</a>
+        <a class="btn-outline" href="/all-on-4">Porównaj z All-on-4</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container prose">
+    <h2>Czym różni się od All-on-4</h2>
+    <p>
+      Idea jest ta sama — stały most na cały łuk — ale opiera się on na
+      <strong>6 implantach zamiast 4</strong>. Dodatkowe punkty podparcia dają:
+    </p>
+    <ul>
+      <li><strong>lepsze rozłożenie sił</strong> żucia na większą liczbę implantów,</li>
+      <li><strong>bufor bezpieczeństwa</strong> — ewentualna utrata jednego implantu jest mniej krytyczna,</li>
+      <li>często możliwość <strong>dłuższego, sztywniejszego</strong> mostu.</li>
+    </ul>
+
+    <h2>Kiedy All-on-6 ma przewagę</h2>
+    <ul>
+      <li><strong>Szczęka (górny łuk)</strong> — kość jest tu zwykle bardziej gąbczasta niż w żuchwie,</li>
+      <li><strong>Silny zgryz / bruksizm</strong> — większe siły do rozłożenia,</li>
+      <li>gdy jest <strong>wystarczająca ilość kości</strong>, by osadzić 6 implantów,</li>
+      <li>gdy zależy nam na <strong>maksymalnej długoterminowej stabilności</strong>.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Więcej implantów ≠ zawsze lepiej.</strong> Dokładanie implantów bez wskazań
+      to zbędny koszt i bardziej rozległy zabieg. Z drugiej strony oszczędzanie tam, gdzie
+      kość i siły żucia wymagają sześciu, to ryzyko. Sztuką jest <strong>dobór do sytuacji</strong>.
+    </div>
+
+    <h2>Przebieg</h2>
+    <ol>
+      <li><strong>CBCT i planowanie cyfrowe</strong> — ocena kości i pozycji 6 implantów.</li>
+      <li><strong>Usunięcie zębów nierokujących</strong> (jeśli są).</li>
+      <li><strong>Wszczepienie 6 implantów.</strong></li>
+      <li><strong>Most tymczasowy</strong> — często tego samego dnia (<a href="/zeby-w-jeden-dzien">obciążenie natychmiastowe</a>).</li>
+      <li><strong>Gojenie</strong> 3-6 miesięcy.</li>
+      <li><strong>Most docelowy.</strong></li>
+    </ol>
+
+    <h2>All-on-4 czy All-on-6 — decyzja</h2>
+    <p>
+      Najczęściej: <strong>All-on-4 w żuchwie</strong> (mocniejsza kość) i rozważenie
+      <strong>All-on-6 w szczęce</strong> lub przy silnym zgryzie. Ostatecznie przesądza
+      obraz CBCT — pełne porównanie: <a href="/all-on-x">All-on-X — który wariant wybrać</a>.
+    </p>
+
+    <h2>Trwałość i koszt</h2>
+    <p>
+      Przy dobrej higienie i kontrolach All-on-6 służy <strong>20+ lat</strong>.
+      Jest zwykle <strong>droższy od All-on-4</strong> (więcej implantów) — szczegóły w
+      <a href="/cennik">cenniku</a>.
+    </p>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>All-on-4 czy All-on-6 — sprawdźmy na CBCT</h2>
+      <p>
+        Prześlij pantomogram lub umów tomografię — dobierzemy wariant pod Twoją kość
+        i zgryz, z realnym planem i kosztem. Przyjmujemy pacjentów z całej Polski.
+      </p>
+      <a class="btn-primary" href={site.clinic.bookingUrl} rel="noopener">Umów bezpłatną konsultację →</a>
+    </div>
+  </section>
+</BaseLayout>

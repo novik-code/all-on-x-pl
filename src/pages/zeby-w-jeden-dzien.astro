@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Zęby w jeden dzień — obciążenie natychmiastowe implantów"
+  description="Stałe zęby w jeden dzień — na czym polega obciążenie natychmiastowe przy All-on-4/All-on-6, dla kogo, jak wygląda „ten jeden dzień”, czego się spodziewać. Nowy uśmiech bez okresu bez zębów. Przewodnik dr Nowosielskiego, M.Sc."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Przewodnik · obciążenie natychmiastowe</p>
+      <h1>Stałe zęby w jeden dzień — czy to naprawdę możliwe?</h1>
+      <p class="lead">
+        Tak — przy spełnieniu warunków. Dzięki <strong>obciążeniu natychmiastowemu</strong>
+        w protokołach All-on-4 / All-on-6 pacjent otrzymuje <strong>stały most tymczasowy
+        tego samego dnia</strong>, w którym wszczepiono implanty. <strong>Nie chodzi bez zębów.</strong>
+      </p>
+      <div class="hero-cta">
+        <a class="btn-primary" href={site.clinic.bookingUrl} rel="noopener">Sprawdź, czy się kwalifikujesz →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container prose">
+    <h2>Co oznacza „zęby w jeden dzień"</h2>
+    <p>
+      To <strong>obciążenie natychmiastowe</strong> (immediate loading): bezpośrednio po
+      wszczepieniu implantów zakładany jest na nie <strong>stały most tymczasowy</strong>,
+      z którym pacjent wychodzi z gabinetu. Most docelowy powstaje później, po wygojeniu.
+      W praktyce oznacza to <strong>nowy uśmiech i funkcję żucia od razu</strong>,
+      bez okresu chodzenia bez zębów.
+    </p>
+
+    <h2>Jak to możliwe</h2>
+    <p>
+      Kluczowa jest <strong>stabilizacja pierwotna</strong> implantów — czyli ich mocne
+      „zakotwiczenie" w kości w chwili wszczepienia. Gdy implanty są wystarczająco
+      stabilne, można je od razu połączyć sztywnym mostem, który <strong>rozkłada siły</strong>
+      i pozwala na natychmiastowe użytkowanie. Pomaga w tym:
+    </p>
+    <ul>
+      <li><strong>cyfrowe planowanie</strong> na podstawie CBCT,</li>
+      <li><strong>pochylenie implantów</strong> (All-on-4) dla lepszego zakotwiczenia,</li>
+      <li><strong>sztywne spięcie</strong> wszystkich implantów jednym mostem.</li>
+    </ul>
+
+    <h2>Jak wygląda „ten jeden dzień"</h2>
+    <ol>
+      <li><strong>Przygotowanie</strong> — znieczulenie, ewentualne usunięcie zębów nierokujących.</li>
+      <li><strong>Wszczepienie implantów</strong> (4 lub 6 na łuk).</li>
+      <li><strong>Pobranie wycisku/skanu</strong> i wykonanie mostu tymczasowego.</li>
+      <li><strong>Założenie stałego mostu tymczasowego</strong> — wychodzisz ze stałymi zębami.</li>
+    </ol>
+    <div class="callout">
+      <strong>Most tymczasowy ≠ proteza wyjmowana.</strong> To stała konstrukcja przykręcona
+      do implantów — estetyczna i funkcjonalna na czas gojenia. Po 3-6 miesiącach zastępuje
+      ją most docelowy.
+    </div>
+
+    <h2>Dla kogo — i kiedy NIE</h2>
+    <p>Obciążenie natychmiastowe jest możliwe, gdy:</p>
+    <ul>
+      <li>uzyskano dobrą <strong>stabilizację pierwotną</strong> implantów,</li>
+      <li>jest <strong>wystarczająca jakość kości</strong>,</li>
+      <li>stan ogólny pacjenta nie podnosi istotnie ryzyka.</li>
+    </ul>
+    <p>
+      Czasem bezpieczniej jest odroczyć obciążenie (klasyczny protokół) — np. przy słabej
+      kości lub niewystarczającej stabilizacji. To <strong>decyzja kliniczna</strong>
+      podejmowana na podstawie CBCT i sytuacji śródzabiegowej — uczciwość w tej ocenie
+      chroni długoterminowy wynik.
+    </p>
+
+    <h2>Pierwsze tygodnie</h2>
+    <ul>
+      <li><strong>Dieta miękka</strong> przez czas zalecony przez lekarza,</li>
+      <li>delikatna <strong>higiena</strong> okolicy i kontrole,</li>
+      <li>unikanie nadmiernych obciążeń mostu tymczasowego.</li>
+    </ul>
+    <p>Więcej: <a href="/all-on-4">All-on-4</a> · <a href="/all-on-6">All-on-6</a> · <a href="/all-on-x">który wariant wybrać</a>.</p>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Chcesz wyjść ze stałymi zębami tego samego dnia?</h2>
+      <p>
+        Prześlij pantomogram lub umów CBCT — ocenimy, czy kwalifikujesz się do obciążenia
+        natychmiastowego, i zaplanujemy „ten jeden dzień". Pacjentów przyjmujemy z całej Polski.
+      </p>
+      <a class="btn-primary" href={site.clinic.bookingUrl} rel="noopener">Umów bezpłatną konsultację →</a>
+    </div>
+  </section>
+</BaseLayout>

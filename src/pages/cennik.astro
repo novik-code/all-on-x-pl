@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Cennik All-on-4 i All-on-6 — ile kosztują stałe zęby na implantach"
+  description="Ile kosztuje All-on-4 i All-on-6 w Polsce — co składa się na cenę, od czego zależy, dlaczego warianty różnią się kosztem, finansowanie. Orientacyjne widełki + jak uzyskać dokładną wycenę. Przewodnik dr Nowosielskiego, M.Sc."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Przewodnik · cena i koszt</p>
+      <h1>Cennik All-on-4 / All-on-6 — ile kosztują stałe zęby</h1>
+      <p class="lead">
+        Cena All-on-4 i All-on-6 zależy od wielu czynników — liczby implantów, materiałów,
+        potrzeby augmentacji i rodzaju mostu docelowego. Poniżej <strong>orientacyjne widełki</strong>
+        i to, co realnie składa się na koszt. Dokładną wycenę ustalamy po CBCT.
+      </p>
+      <div class="hero-cta">
+        <a class="btn-primary" href={site.clinic.bookingUrl} rel="noopener">Poproś o indywidualną wycenę →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container prose">
+    <div class="callout">
+      <strong>Uwaga:</strong> poniższe kwoty to <strong>orientacyjne widełki rynkowe</strong>
+      dla Polski, podane wyłącznie informacyjnie. Wiążącą cenę można podać dopiero po
+      badaniu i tomografii (CBCT), bo zależy ona od indywidualnej sytuacji.
+    </div>
+
+    <h2>Orientacyjne widełki (jeden łuk)</h2>
+    <table>
+      <thead>
+        <tr><th>Rozwiązanie</th><th>Orientacyjnie (1 łuk)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>All-on-4</td><td>od ok. 25 000-45 000 zł</td></tr>
+        <tr><td>All-on-6</td><td>od ok. 35 000-55 000 zł</td></tr>
+        <tr><td>Most docelowy premium (np. cyrkon)</td><td>wpływa na górną granicę</td></tr>
+      </tbody>
+    </table>
+    <p>
+      Różnica między All-on-4 a All-on-6 wynika głównie z <strong>liczby implantów</strong>
+      i bardziej rozbudowanej konstrukcji. Który wariant jest dla Ciebie:
+      <a href="/all-on-x">All-on-X — jak wybrać</a>.
+    </p>
+
+    <h2>Co składa się na cenę</h2>
+    <ul>
+      <li><strong>Implanty</strong> — liczba (4 vs 6) i system (marka),</li>
+      <li><strong>Most tymczasowy</strong> (przy <a href="/zeby-w-jeden-dzien">obciążeniu natychmiastowym</a>),</li>
+      <li><strong>Most docelowy</strong> — materiał (akryl/kompozyt vs cyrkon) mocno wpływa na cenę,</li>
+      <li><strong>Diagnostyka</strong> — CBCT, planowanie cyfrowe,</li>
+      <li><strong>Ewentualne usunięcia zębów</strong> i — rzadziej — augmentacja kości,</li>
+      <li><strong>Wizyty kontrolne</strong> i opieka pozabiegowa.</li>
+    </ul>
+
+    <h2>Od czego zależy ostateczny koszt</h2>
+    <ul>
+      <li><strong>Stan wyjściowy</strong> — czy są zęby do usunięcia, ile kości,</li>
+      <li><strong>Wariant</strong> — All-on-4 vs All-on-6,</li>
+      <li><strong>Materiał mostu docelowego</strong>,</li>
+      <li><strong>Jeden czy oba łuki</strong> (szczęka i/lub żuchwa).</li>
+    </ul>
+
+    <h2>Czy to się opłaca w porównaniu z protezą</h2>
+    <p>
+      Proteza całkowita jest tańsza na starcie, ale wymaga wymiany co 5-8 lat i nie
+      zatrzymuje zaniku kości. All-on-4/6 to <strong>jednorazowa, długoletnia inwestycja</strong>
+      (20+ lat) z komfortem zbliżonym do zębów własnych. W dłuższej perspektywie różnica
+      kosztów się zmniejsza — przy nieporównywalnie wyższej jakości życia.
+    </p>
+
+    <h2>Finansowanie</h2>
+    <p>
+      Wiele klinik oferuje <strong>rozłożenie płatności / raty</strong>. Szczegóły i dostępne
+      opcje omawiamy indywidualnie podczas konsultacji.
+    </p>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Chcesz poznać dokładny koszt swojego leczenia?</h2>
+      <p>
+        Prześlij pantomogram lub umów CBCT — przygotujemy <strong>pisemny plan leczenia
+        z wyceną</strong> dopasowaną do Twojej sytuacji. Pacjentów przyjmujemy z całej Polski.
+      </p>
+      <a class="btn-primary" href={site.clinic.bookingUrl} rel="noopener">Poproś o wycenę →</a>
+    </div>
+  </section>
+</BaseLayout>

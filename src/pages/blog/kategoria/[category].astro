@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { categoryMeta, formatDate, allCategories, type Category } from '../../../utils/categories';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return allCategories.map((cat) => ({
+    params: { category: cat },
+    props: {
+      posts: posts.filter((p) => p.data.category === cat).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+      category: cat,
+    },
+  }));
+}
+
+const { posts, category } = Astro.props as {
+  posts: Awaited<ReturnType<typeof getCollection<'blog'>>>;
+  category: Category;
+};
+const meta = categoryMeta[category];
+---
+
+<BaseLayout title={`${meta.label} — artykuły`} description={meta.description}>
+  <div class="container content">
+    <nav class="breadcrumbs"><a href="/">Start</a> · <a href="/blog">Blog</a> · <span>{meta.label}</span></nav>
+    <header>
+      <p class="eyebrow">Kategoria</p>
+      <h1>{meta.label}</h1>
+      <p class="lead">{meta.shortDescription}</p>
+      <p class="meta">{posts.length} {posts.length === 1 ? 'artykuł' : posts.length < 5 ? 'artykuły' : 'artykułów'}</p>
+    </header>
+    <p class="intro">{meta.description}</p>
+    {posts.length === 0 ? (
+      <p class="empty">Wkrótce pojawią się artykuły w tej kategorii.</p>
+    ) : (
+      <ul class="post-list">
+        {posts.map((post) => (
+          <li>
+            <article>
+              <p class="post-meta"><time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time></p>
+              <h2><a href={`/blog/${post.id}`}>{post.data.title}</a></h2>
+              <p>{post.data.description}</p>
+              <a class="read-more" href={`/blog/${post.id}`}>Czytaj dalej →</a>
+            </article>
+          </li>
+        ))}
+      </ul>
+    )}
+    <p class="see-all-link"><a href="/blog">← Wszystkie artykuły</a></p>
+  </div>
+</BaseLayout>
+
+<style>
+  .content { max-width: 56rem; }
+  .breadcrumbs { font-size: 0.875rem; color: var(--color-muted); margin-bottom: 1.5rem; }
+  .breadcrumbs a { text-decoration: none; }
+  header { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); }
+  .lead { font-size: 1.1875rem; color: var(--color-muted); margin: 0.5rem 0; }
+  .meta { font-size: 0.8125rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; color: var(--color-accent); margin: 0 0 0.5rem; font-weight: 700; }
+  .intro { background: var(--color-card); padding: 1.5rem; border-left: 3px solid var(--color-accent); border-radius: 4px; margin-bottom: 2rem; color: var(--color-muted); }
+  .post-list { list-style: none; padding: 0; }
+  .post-list > li { background: var(--color-card); padding: 1.75rem; border-radius: 6px; border-left: 3px solid var(--color-accent); margin-bottom: 1.25rem; }
+  .post-list h2 { margin: 0.5rem 0 0.75rem; }
+  .post-list h2 a { text-decoration: none; }
+  .post-meta { font-size: 0.75rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; }
+  .read-more { font-weight: 600; text-decoration: none; }
+  .read-more:hover { text-decoration: underline; }
+  .empty { color: var(--color-muted); font-style: italic; }
+  .see-all-link { margin-top: 2rem; text-align: center; }
+  .see-all-link a { font-weight: 600; }
+</style>

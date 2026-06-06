@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout title="Nie znaleziono strony (404)" noindex={true}>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Błąd 404</p>
+      <h1>Tej strony nie ma</h1>
+      <p class="lead">Strona mogła zostać przeniesiona lub nigdy nie istniała pod tym adresem.</p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="/">Strona główna →</a>
+        <a class="btn-outline" href="/all-on-x">All-on-X — co to jest</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container prose">
+    <h2>Popularne tematy</h2>
+    <ul>
+      <li><a href="/all-on-4">All-on-4</a></li>
+      <li><a href="/all-on-6">All-on-6</a></li>
+      <li><a href="/zeby-w-jeden-dzien">Zęby w jeden dzień</a></li>
+      <li><a href="/cennik">Cennik All-on-4 / All-on-6</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+  </section>
+</BaseLayout>

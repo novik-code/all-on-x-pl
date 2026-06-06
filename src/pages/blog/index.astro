@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { categoryMeta, formatDate, allCategories, slugify, type Category } from '../../utils/categories';
+
+const allPosts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const counts: Record<Category, number> = Object.fromEntries(
+  allCategories.map((c) => [c, 0]),
+) as Record<Category, number>;
+allPosts.forEach((p) => { counts[p.data.category] += 1; });
+
+const tagSet = new Set<string>();
+allPosts.forEach((p) => p.data.tags.forEach((t) => tagSet.add(t)));
+const tags = Array.from(tagSet).sort();
+---
+
+<BaseLayout
+  title="Blog — All-on-4, All-on-6, stałe zęby na implantach"
+  description="Artykuły o All-on-4, All-on-6 i stałych zębach na implantach: obciążenie natychmiastowe, koszt, kwalifikacja, trwałość, najczęstsze pytania. Treści dr Marcina Nowosielskiego, M.Sc. RWTH Aachen."
+>
+  <div class="container blog-layout">
+    <main class="blog-main">
+      <header>
+        <p class="eyebrow">Blog</p>
+        <h1>All-on-4, All-on-6 i stałe zęby na implantach</h1>
+        <p class="lead">
+          Artykuły o odbudowie całego łuku na implantach — od podstaw All-on-X,
+          przez obciążenie natychmiastowe („zęby w jeden dzień"), po koszty,
+          trwałość i najczęstsze pytania pacjentów.
+        </p>
+      </header>
+
+      <ul class="post-list">
+        {allPosts.map((post) => (
+          <li>
+            <article>
+              <p class="post-meta">
+                <a class="category" href={`/blog/kategoria/${post.data.category}`}>
+                  {categoryMeta[post.data.category].label}
+                </a>
+                <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+              </p>
+              <h2><a href={`/blog/${post.id}`}>{post.data.title}</a></h2>
+              <p>{post.data.description}</p>
+              <a class="read-more" href={`/blog/${post.id}`}>Czytaj dalej →</a>
+            </article>
+          </li>
+        ))}
+      </ul>
+    </main>
+
+    <aside class="blog-sidebar">
+      <section class="widget">
+        <h3>Kategorie</h3>
+        <ul>
+          {allCategories.map((cat) => (
+            <li>
+              <a href={`/blog/kategoria/${cat}`}>
+                {categoryMeta[cat].label}
+                <span class="count">{counts[cat]}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {tags.length > 0 && (
+        <section class="widget">
+          <h3>Tagi</h3>
+          <div class="tag-cloud">
+            {tags.map((t) => (
+              <a class="tag" href={`/blog/tag/${slugify(t)}`}>#{t}</a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <section class="widget cta">
+        <h3>Konsultacja</h3>
+        <p>Myślisz o All-on-4 / All-on-6? Bezpłatna ocena kwalifikacji — prześlij pantomogram lub umów CBCT.</p>
+        <a class="btn-primary" href="https://mikrostomart.pl/rezerwacja" rel="noopener">Umów konsultację →</a>
+      </section>
+
+      <section class="widget">
+        <h3>Subskrybuj</h3>
+        <p>RSS: <a href="/rss.xml">/rss.xml</a></p>
+      </section>
+    </aside>
+  </div>
+</BaseLayout>
+
+<style>
+  .blog-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 3rem;
+  }
+  .blog-main header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border); }
+  .blog-main .lead { font-size: 1.1875rem; color: var(--color-muted); }
+  .eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; color: var(--color-accent); margin: 0 0 0.5rem; font-weight: 700; }
+
+  .post-list { list-style: none; padding: 0; }
+  .post-list > li {
+    background: var(--color-card);
+    padding: 2rem;
+    border-radius: 6px;
+    border-left: 3px solid var(--color-accent);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(28, 87, 87, 0.06);
+  }
+  .post-list h2 { margin: 0.5rem 0 0.75rem; }
+  .post-list h2 a { text-decoration: none; }
+  .post-list h2 a:hover { text-decoration: underline; }
+  .post-meta { font-size: 0.75rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .post-meta a { text-decoration: none; }
+  .category { color: var(--color-accent); font-weight: 700; }
+  .read-more { font-weight: 600; text-decoration: none; }
+  .read-more:hover { text-decoration: underline; }
+
+  .blog-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+  .widget { background: var(--color-card); padding: 1.5rem; border-radius: 6px; border-left: 3px solid var(--color-accent); }
+  .widget h3 { margin: 0 0 0.75rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary); font-weight: 700; }
+  .widget ul { list-style: none; padding: 0; margin: 0; }
+  .widget ul li { margin-bottom: 0.5rem; }
+  .widget ul li a { display: flex; justify-content: space-between; align-items: baseline; text-decoration: none; color: var(--color-fg); font-size: 0.9375rem; }
+  .widget ul li a:hover { color: var(--color-accent); }
+  .count { background: var(--color-bg); color: var(--color-muted); padding: 0.125rem 0.5rem; font-size: 0.75rem; border-radius: 999px; }
+  .tag-cloud { display: flex; gap: 0.375rem; flex-wrap: wrap; }
+  .tag { background: var(--color-bg); padding: 0.25rem 0.625rem; font-size: 0.8125rem; color: var(--color-muted); text-decoration: none; border-radius: 3px; }
+  .tag:hover { background: var(--color-accent); color: white; }
+  .widget.cta p { color: var(--color-muted); font-size: 0.875rem; }
+
+  @media (max-width: 900px) {
+    .blog-layout { grid-template-columns: 1fr; }
+    .blog-sidebar { flex-direction: row; flex-wrap: wrap; }
+    .widget { flex: 1 1 200px; }
+  }
+</style>

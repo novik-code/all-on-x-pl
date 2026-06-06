@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a3a52"/>
+      <stop offset="100%" stop-color="#2a5070"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="80" y="170" font-family="Inter, system-ui" font-size="36" fill="#c87a4a" letter-spacing="6" font-weight="700">PRZEWODNIK PACJENTA · OPOLE</text>
+
+  <text x="80" y="290" font-family="Inter, system-ui" font-size="96" fill="white" font-weight="800">Implantologia</text>
+  <text x="80" y="395" font-family="Inter, system-ui" font-size="96" fill="white" font-weight="800">Opole</text>
+
+  <line x1="80" y1="445" x2="320" y2="445" stroke="#c87a4a" stroke-width="4"/>
+
+  <text x="80" y="500" font-family="Inter, system-ui" font-size="28" fill="#d4dde8">Implanty · All-on-4 · Sinus lift · Augmentacja kości</text>
+
+  <text x="80" y="555" font-family="Inter, system-ui" font-size="24" fill="#8ea5be">lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen  ·  implantologia.opole.pl</text>
+
+  <text x="1120" y="555" text-anchor="end" font-family="Inter, system-ui" font-size="180" font-weight="800" fill="#c87a4a" opacity="0.18">iO</text>
+</svg>

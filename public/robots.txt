@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://all-on-x.pl/sitemap-index.xml
+Sitemap: https://zeby-w-jeden-dzien.pl/sitemap-index.xml

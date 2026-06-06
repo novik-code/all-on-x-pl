@@ -1,11 +1,11 @@
-// Centralna konfiguracja brandu — all-on-x.pl
+// Centralna konfiguracja brandu — zeby-w-jeden-dzien.pl
 // STRONA KRAJOWA (premium): All-on-4 / All-on-6 / All-on-X — stałe zęby w jeden dzień
 // Intent KRAJOWY (bez geo-kapy lokalnej). Konwersja → klinika Mikrostomart Opole.
 
 export const site = {
-  url: 'https://all-on-x.pl',
+  url: 'https://zeby-w-jeden-dzien.pl',
   title: 'All-on-4, All-on-6, All-on-X — stałe zęby w jeden dzień | dr Marcin Nowosielski',
-  shortTitle: 'All-on-X.pl',
+  shortTitle: 'Zęby w jeden dzień',
   description:
     'All-on-4, All-on-6, All-on-X — stały most na implantach i nowy uśmiech w jeden dzień. Niezależny przewodnik pacjenta: wskazania, przebieg, obciążenie natychmiastowe, koszt. Sygnowane przez lek. dent. Marcina Nowosielskiego, M.Sc. RWTH Aachen. Leczenie w klinice Mikrostomart.',
   ogImage: '/og-default.svg',

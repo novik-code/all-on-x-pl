@@ -15,12 +15,13 @@ const physicianSchema = {
   jobTitle: site.author.jobTitle,
   url: site.author.canonicalUrl,
   sameAs: [
-    site.author.canonicalUrl,
-    'https://implant.opole.pl/o-autorze',
-    'https://implantologia.opole.pl/o-autorze',
-    'https://endodoncjamikroskopowa.pl/o-autorze',
+    'https://www.facebook.com/marcindentist',
+    'https://www.instagram.com/nowosielski_marcin/',
+    'https://www.youtube.com/c/DentistMarcIn',
+    'https://www.tiktok.com/@nowosielskimarcin',
     'https://www.mikrostomart.pl/zespol/marcin-nowosielski',
     'https://czelej.com.pl/sklep/wlasny-gabinet-poradnik/',
+    'https://www.laserandhealthacademy.com/media/uploads/laha/docs/2019/summaries/s31_marques_nowosielski.pdf',
   ],
   medicalSpecialty: 'https://schema.org/Dentistry',
   knowsAbout: [
@@ -101,7 +102,10 @@ const dentistSchema = {
     opens: h.opens,
     closes: h.closes,
   })),
-  areaServed: { '@type': 'Country', name: 'Polska' },
+  areaServed: [
+    { '@type': 'City', name: 'Opole' },
+    { '@type': 'AdministrativeArea', name: 'województwo opolskie' },
+  ],
   availableService: [
     { '@type': 'MedicalProcedure', name: 'All-on-4' },
     { '@type': 'MedicalProcedure', name: 'All-on-6' },

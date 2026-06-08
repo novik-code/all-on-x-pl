@@ -1,7 +1,7 @@
 ---
 title: 'All-on-4 a wiek i choroby ogólne — cukrzyca, osteoporoza, nadciśnienie, palenie'
 description: 'Czy wiek, cukrzyca, osteoporoza, nadciśnienie czy palenie wykluczają All-on-4? Jak choroby ogólne wpływają na kwalifikację i rokowanie implantów pełnego łuku, co da się kontrolować. Przewodnik implantologa.'
-pubDate: 2026-06-07
+pubDate: 2026-05-30
 category: pytania-i-watpliwosci
 tags: [all-on-4, choroby-ogolne, cukrzyca, osteoporoza, palenie, kwalifikacja]
 draft: false
@@ -61,6 +61,6 @@ Wiek, cukrzyca, osteoporoza czy nadciśnienie **rzadko same w sobie wykluczają*
 
 ---
 
-**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog. Leczenie w klinice [Mikrostomart](https://mikrostomart.pl); pacjentów przyjmujemy z całej Polski.
+**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog — All-on-4 / All-on-6. Leczenie w klinice [Mikrostomart](https://mikrostomart.pl) (Opole); pacjentów przyjmujemy z całej Polski.
 
 **Disclaimer:** Treści edukacyjne. Kwalifikacja wymaga indywidualnej oceny zdrowia ogólnego, wywiadu lekowego i CBCT.

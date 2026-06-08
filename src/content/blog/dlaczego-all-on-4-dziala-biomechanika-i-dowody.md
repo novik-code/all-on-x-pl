@@ -1,7 +1,7 @@
 ---
 title: 'Dlaczego All-on-4 działa — biomechanika, dowody i 4 implanty zamiast więcej'
 description: 'Skąd wzięło się All-on-4, dlaczego cztery implanty wystarczają do podparcia całego łuku, jak działają implanty pochylone i co mówią wieloletnie obserwacje. Merytoryczny przewodnik dr Marcina Nowosielskiego, M.Sc. RWTH Aachen.'
-pubDate: 2026-06-01
+pubDate: 2026-05-13
 category: all-on-x
 tags: [all-on-4, biomechanika, dowody-naukowe, implanty-pochylone, historia]
 draft: false
@@ -66,6 +66,6 @@ All-on-4 działa nie „mimo" czterech implantów, lecz **dzięki przemyślanej 
 
 ---
 
-**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog. Leczenie w klinice [Mikrostomart](https://mikrostomart.pl); pacjentów przyjmujemy z całej Polski.
+**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog, leczenie bezzębia. Pacjentów przyjmujemy z całej Polski.
 
 **Disclaimer:** Treści edukacyjne. Dane o przeżywalności to średnie z literatury, nie gwarancja indywidualnego wyniku. Kwalifikacja wymaga oceny i CBCT.

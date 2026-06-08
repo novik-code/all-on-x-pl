@@ -1,7 +1,7 @@
 ---
 title: 'Czy All-on-4 boli? Znieczulenie, ból po zabiegu i rekonwalescencja'
 description: 'Czy zabieg All-on-4 boli — jak wygląda znieczulenie, co czuć w trakcie, ból po zabiegu i ile trwa rekonwalescencja. Realne informacje bez koloryzowania. Przewodnik dr Nowosielskiego, M.Sc.'
-pubDate: 2026-05-16
+pubDate: 2026-04-18
 category: pytania-i-watpliwosci
 tags: [all-on-4, bol, znieczulenie, rekonwalescencja, obawy]
 draft: false
@@ -55,6 +55,6 @@ Zabieg All-on-4 jest **bezbolesny dzięki znieczuleniu**, a dolegliwości po nim
 
 ---
 
-**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog. Leczenie w klinice [Mikrostomart](https://mikrostomart.pl); pacjentów przyjmujemy z całej Polski.
+**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog, leczenie bezzębia. Leczenie prowadzi w [klinice Mikrostomart](https://mikrostomart.pl), Opole.
 
 **Disclaimer:** Treści edukacyjne, nie zastępują konsultacji lekarskiej.

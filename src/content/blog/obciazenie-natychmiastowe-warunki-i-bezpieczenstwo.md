@@ -1,7 +1,7 @@
 ---
 title: 'Obciążenie natychmiastowe — warunki, bezpieczeństwo, kiedy się nie da'
 description: 'Obciążenie natychmiastowe w All-on-4/All-on-6 — od czego zależy, kiedy jest bezpieczne, a kiedy lepiej odroczyć. Stabilizacja pierwotna, jakość kości, decyzja kliniczna. Przewodnik dr Nowosielskiego, M.Sc.'
-pubDate: 2026-05-24
+pubDate: 2026-04-30
 category: zeby-w-jeden-dzien
 tags: [obciazenie-natychmiastowe, stabilizacja-pierwotna, bezpieczenstwo, all-on-4]
 draft: false
@@ -55,6 +55,6 @@ Obciążenie natychmiastowe pozwala wyjść ze stałymi zębami tego samego dnia
 
 ---
 
-**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog. Leczenie w klinice [Mikrostomart](https://mikrostomart.pl); pacjentów przyjmujemy z całej Polski.
+**Autor:** [lek. dent. Marcin Nowosielski](/o-autorze), M.Sc. RWTH Aachen — specjalista implantologii pełnego łuku.
 
 **Disclaimer:** Treści edukacyjne. Kwalifikacja wymaga indywidualnej oceny i CBCT.

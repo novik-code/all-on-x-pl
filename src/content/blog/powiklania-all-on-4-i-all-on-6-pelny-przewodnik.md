@@ -1,7 +1,7 @@
 ---
 title: 'Powikłania All-on-4 i All-on-6 — pełny przewodnik: ryzyka i jak ich unikać'
 description: 'Uczciwy, szczegółowy przewodnik po powikłaniach All-on-4/All-on-6: periimplantitis, pęknięcie mostu, poluzowanie śruby, niepowodzenie implantu. Czynniki ryzyka, objawy, zapobieganie i ratowanie. dr Marcin Nowosielski, M.Sc.'
-pubDate: 2026-06-03
+pubDate: 2026-05-20
 category: po-zabiegu
 tags: [powiklania, periimplantitis, ryzyko, niepowodzenie, zapobieganie]
 draft: false
@@ -94,6 +94,6 @@ All-on-4 i All-on-6 to przewidywalne, dobrze udokumentowane rozwiązania — ale
 
 ---
 
-**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog. Leczenie w klinice [Mikrostomart](https://mikrostomart.pl); pacjentów przyjmujemy z całej Polski.
+**Konsultacja i leczenie:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — specjalista implantologii pełnego łuku.
 
 **Disclaimer:** Treści edukacyjne, nie zastępują konsultacji lekarskiej. Ocena ryzyka jest indywidualna.

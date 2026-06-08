@@ -1,7 +1,7 @@
 ---
 title: 'Pierwszy rok z All-on-4 — od mostu tymczasowego do docelowego'
 description: 'Jak wygląda pierwszy rok po All-on-4: most tymczasowy, gojenie i osteointegracja, adaptacja do nowych zębów, most docelowy, kontrole i higiena. Co normalne, na co uważać. Przewodnik krok po kroku.'
-pubDate: 2026-06-08
+pubDate: 2026-06-06
 category: po-zabiegu
 tags: [all-on-4, po-zabiegu, most-tymczasowy, most-docelowy, adaptacja]
 draft: false
@@ -71,6 +71,6 @@ Pierwszy rok z All-on-4 to droga **od mostu tymczasowego (dzień 0) → przez go
 
 ---
 
-**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog. Leczenie w klinice [Mikrostomart](https://mikrostomart.pl); pacjentów przyjmujemy z całej Polski.
+**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog, leczenie bezzębia. Leczenie prowadzi w [klinice Mikrostomart](https://mikrostomart.pl), Opole.
 
 **Disclaimer:** Treści edukacyjne, nie zastępują indywidualnych zaleceń lekarza.

@@ -1,7 +1,7 @@
 ---
 title: 'Ile trwa leczenie All-on-4? Etapy i realny harmonogram'
 description: 'Ile trwa leczenie All-on-4 — od konsultacji, przez dzień zabiegu z zębami tymczasowymi, po most docelowy. Realny harmonogram krok po kroku i co wpływa na czas. Przewodnik dr Nowosielskiego, M.Sc.'
-pubDate: 2026-05-12
+pubDate: 2026-04-13
 category: all-on-4
 tags: [all-on-4, czas-leczenia, etapy, harmonogram]
 draft: false
@@ -59,6 +59,6 @@ Stałe zęby tymczasowe dostajesz **w jeden dzień**, a pełne leczenie All-on-4
 
 ---
 
-**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog. Leczenie w klinice [Mikrostomart](https://mikrostomart.pl); pacjentów przyjmujemy z całej Polski.
+**Konsultacja i leczenie:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — specjalista implantologii pełnego łuku.
 
 **Disclaimer:** Treści edukacyjne. Harmonogram zależy od indywidualnej oceny i CBCT.

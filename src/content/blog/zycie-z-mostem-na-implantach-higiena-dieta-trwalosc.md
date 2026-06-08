@@ -1,7 +1,7 @@
 ---
 title: 'Życie z mostem na implantach — higiena, dieta, trwałość'
 description: 'Jak dbać o stały most All-on-4/All-on-6, by służył 20+ lat. Higiena pod mostem (irygator, szczoteczki), dieta, kontrole, periimplantitis i jak go uniknąć. Przewodnik dr Nowosielskiego, M.Sc.'
-pubDate: 2026-06-06
+pubDate: 2026-05-25
 category: po-zabiegu
 tags: [po-zabiegu, higiena, dieta, trwalosc, periimplantitis]
 draft: false
@@ -61,6 +61,6 @@ Stały most All-on-4/All-on-6 służy długo, jeśli **codziennie czyścisz prze
 
 ---
 
-**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog. Leczenie w klinice [Mikrostomart](https://mikrostomart.pl); pacjentów przyjmujemy z całej Polski.
+**O autorze:** lek. dent. Marcin Nowosielski (M.Sc. RWTH Aachen) — implantolog, leczenie bezzębia. [Poznaj autora →](/o-autorze)
 
 **Disclaimer:** Treści edukacyjne, nie zastępują konsultacji lekarskiej.

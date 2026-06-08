@@ -1,7 +1,7 @@
 ---
 title: 'All-on-4 przy zaniku kości — implanty pochylone czy augmentacja?'
 description: 'Mało kości na implanty? All-on-4 często pozwala uniknąć rozległej augmentacji dzięki pochyleniu tylnych implantów. Kiedy wystarczą implanty pochylone, a kiedy potrzebny sinus lift lub zygomatic. Przewodnik dr Nowosielskiego, M.Sc.'
-pubDate: 2026-05-20
+pubDate: 2026-04-25
 category: all-on-x
 tags: [all-on-4, zanik-kosci, implanty-pochylone, augmentacja, zygomatic]
 draft: false
@@ -55,6 +55,6 @@ Zanik kości **rzadko jest ostatecznym „nie"** dla stałych zębów. Dzięki p
 
 ---
 
-**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog. Leczenie w klinice [Mikrostomart](https://mikrostomart.pl); pacjentów przyjmujemy z całej Polski.
+**Autor:** lek. dent. Marcin Nowosielski, M.Sc. RWTH Aachen — specjalista implantologii pełnego łuku. Pacjentów przyjmujemy z całej Polski.
 
 **Disclaimer:** Treści edukacyjne. Kwalifikacja i metoda wymagają indywidualnej oceny i CBCT.

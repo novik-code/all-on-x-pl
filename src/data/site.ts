@@ -8,7 +8,7 @@ export const site = {
   shortTitle: 'Zęby w jeden dzień',
   description:
     'All-on-4, All-on-6, All-on-X — stały most na implantach i nowy uśmiech w jeden dzień. Niezależny przewodnik pacjenta: wskazania, przebieg, obciążenie natychmiastowe, koszt. Sygnowane przez lek. dent. Marcina Nowosielskiego, M.Sc. RWTH Aachen. Leczenie w klinice Mikrostomart.',
-  ogImage: '/og-default.svg',
+  ogImage: '/og-default.png',
   locale: 'pl-PL',
   // Autor wszystkich treści — Marcin Nowosielski (kanoniczny @id na nowosielski.pl/#person)
   // Wspólna tożsamość z całym ekosystemem — Google łączy E-E-A-T przez wspólny @id Physician.

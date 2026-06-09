@@ -73,7 +73,7 @@ const breadcrumbSchema = {
     </nav>
 
     <header>
-      <p class="post-meta">
+      <p class="aox-feedmeta">
         <a class="category" href={`/blog/kategoria/${post.data.category}`}>{cat.label}</a>
         <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
         <span class="reading-time">· {mins} min czytania</span>
@@ -143,8 +143,8 @@ const breadcrumbSchema = {
   .post header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border); }
   .post h1 { font-size: 2.25rem; margin: 1rem 0; }
   .lead { font-size: 1.1875rem; color: var(--color-muted); }
-  .post-meta { font-size: 0.75rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
-  .post-meta a { text-decoration: none; }
+  .aox-feedmeta { font-size: 0.75rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+  .aox-feedmeta a { text-decoration: none; }
   .category { color: var(--color-accent); font-weight: 700; }
 
   .author-card { background: var(--color-card); padding: 1.25rem; border-left: 3px solid var(--color-accent); border-radius: 4px; margin-top: 1.5rem; }

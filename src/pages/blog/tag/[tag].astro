@@ -24,7 +24,7 @@ const displayTag = tag.replace(/-/g, ' ');
   <div class="container content">
     <nav class="breadcrumbs"><a href="/">Start</a> · <a href="/blog">Blog</a> · <span>#{displayTag}</span></nav>
     <header>
-      <p class="eyebrow">Tag</p>
+      <p class="aox-kicker">Tag</p>
       <h1>#{displayTag}</h1>
       <p class="meta">{posts.length} {posts.length === 1 ? 'artykuł' : posts.length < 5 ? 'artykuły' : 'artykułów'}</p>
     </header>
@@ -32,7 +32,7 @@ const displayTag = tag.replace(/-/g, ' ');
       {posts.map((post) => (
         <li>
           <article>
-            <p class="post-meta">
+            <p class="aox-feedmeta">
               <span class="category">{categoryMeta[post.data.category]?.label ?? post.data.category}</span>
               <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
             </p>
@@ -53,12 +53,12 @@ const displayTag = tag.replace(/-/g, ' ');
   .breadcrumbs a { text-decoration: none; }
   header { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); }
   .meta { font-size: 0.8125rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.05em; }
-  .eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; color: var(--color-accent); margin: 0 0 0.5rem; font-weight: 700; }
+  .aox-kicker { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; color: var(--color-accent); margin: 0 0 0.5rem; font-weight: 700; }
   .post-list { list-style: none; padding: 0; }
   .post-list > li { background: var(--color-card); padding: 1.75rem; border-radius: 6px; border-left: 3px solid var(--color-accent); margin-bottom: 1.25rem; }
   .post-list h2 { margin: 0.5rem 0 0.75rem; }
   .post-list h2 a { text-decoration: none; }
-  .post-meta { font-size: 0.75rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; display: flex; gap: 1rem; flex-wrap: wrap; }
+  .aox-feedmeta { font-size: 0.75rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; display: flex; gap: 1rem; flex-wrap: wrap; }
   .category { color: var(--color-accent); font-weight: 700; }
   .read-more { font-weight: 600; text-decoration: none; }
   .see-all-link { margin-top: 2rem; text-align: center; }

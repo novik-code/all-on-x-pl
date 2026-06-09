@@ -24,7 +24,7 @@ const tags = Array.from(tagSet).sort();
   <div class="container blog-layout">
     <main class="blog-main">
       <header>
-        <p class="eyebrow">Blog</p>
+        <p class="aox-kicker">Blog</p>
         <h1>All-on-4, All-on-6 i stałe zęby na implantach</h1>
         <p class="lead">
           Artykuły o odbudowie całego łuku na implantach — od podstaw All-on-X,
@@ -37,7 +37,7 @@ const tags = Array.from(tagSet).sort();
         {allPosts.map((post) => (
           <li>
             <article>
-              <p class="post-meta">
+              <p class="aox-feedmeta">
                 <a class="category" href={`/blog/kategoria/${post.data.category}`}>
                   {categoryMeta[post.data.category].label}
                 </a>
@@ -100,7 +100,7 @@ const tags = Array.from(tagSet).sort();
   }
   .blog-main header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border); }
   .blog-main .lead { font-size: 1.1875rem; color: var(--color-muted); }
-  .eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; color: var(--color-accent); margin: 0 0 0.5rem; font-weight: 700; }
+  .aox-kicker { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; color: var(--color-accent); margin: 0 0 0.5rem; font-weight: 700; }
 
   .post-list { list-style: none; padding: 0; }
   .post-list > li {
@@ -114,8 +114,8 @@ const tags = Array.from(tagSet).sort();
   .post-list h2 { margin: 0.5rem 0 0.75rem; }
   .post-list h2 a { text-decoration: none; }
   .post-list h2 a:hover { text-decoration: underline; }
-  .post-meta { font-size: 0.75rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
-  .post-meta a { text-decoration: none; }
+  .aox-feedmeta { font-size: 0.75rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .aox-feedmeta a { text-decoration: none; }
   .category { color: var(--color-accent); font-weight: 700; }
   .read-more { font-weight: 600; text-decoration: none; }
   .read-more:hover { text-decoration: underline; }

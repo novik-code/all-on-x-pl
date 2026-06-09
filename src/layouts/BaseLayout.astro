@@ -63,20 +63,20 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site.url).toString
   <body>
     <a href="#main" class="skip-link">Przejdź do treści</a>
 
-    <header class="site-header">
+    <header class="aox-topbar">
       <div class="container">
         <a href="/" class="brand">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2 L12 22" />
-              <path d="M8 7 L8 18" />
-              <path d="M16 7 L16 18" />
-              <circle cx="12" cy="6" r="2.5" />
+          <span class="aox-logomark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9 Q12 2 21 9" />
+              <line x1="7" y1="11" x2="7" y2="20" />
+              <line x1="12" y1="11" x2="12" y2="21" />
+              <line x1="17" y1="11" x2="17" y2="20" />
             </svg>
           </span>
           <div>
             <strong>Zęby w jeden dzień</strong>
-            <span class="brand-sub">Stałe zęby w jeden dzień · dr M. Nowosielski M.Sc.</span>
+            <span class="aox-tagline">Stałe zęby w jeden dzień · dr M. Nowosielski M.Sc.</span>
           </div>
         </a>
         <nav aria-label="Główna nawigacja">
@@ -101,9 +101,9 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site.url).toString
       <slot />
     </main>
 
-    <footer class="site-footer">
+    <footer class="aox-foot">
       <div class="container">
-        <div class="footer-grid">
+        <div class="aox-footcols">
           <div>
             <h3>Zęby w jeden dzień</h3>
             <p>
@@ -265,13 +265,13 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site.url).toString
       }
       .skip-link:focus { left: 0; }
 
-      .site-header {
+      .aox-topbar {
         background: white;
         border-bottom: 2px solid var(--color-accent);
         position: sticky; top: 0; z-index: 50;
         box-shadow: 0 1px 4px rgba(0,0,0,0.04);
       }
-      .site-header .container {
+      .aox-topbar .container {
         display: flex; align-items: center; gap: 2rem;
         padding-top: 1rem; padding-bottom: 1rem;
         flex-wrap: wrap;
@@ -280,7 +280,7 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site.url).toString
         text-decoration: none; color: var(--color-primary);
         display: flex; align-items: center; gap: 0.875rem;
       }
-      .brand-mark {
+      .aox-logomark {
         background: var(--color-primary);
         color: var(--color-accent);
         width: 2.5rem; height: 2.5rem;
@@ -288,20 +288,20 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site.url).toString
         border-radius: 50%;
       }
       .brand strong { display: block; font-size: 1.0625rem; font-weight: 800; line-height: 1.2; color: var(--color-primary); }
-      .brand-sub { font-size: 0.75rem; color: var(--color-muted); }
+      .aox-tagline { font-size: 0.75rem; color: var(--color-muted); }
 
-      .site-header nav { flex: 1; }
-      .site-header nav ul {
+      .aox-topbar nav { flex: 1; }
+      .aox-topbar nav ul {
         display: flex; gap: 1.125rem; list-style: none; padding: 0; margin: 0;
         flex-wrap: wrap;
       }
-      .site-header nav a {
+      .aox-topbar nav a {
         text-decoration: none; color: var(--color-fg); font-size: 0.875rem;
         padding: 0.25rem 0; border-bottom: 2px solid transparent;
         font-weight: 500;
       }
-      .site-header nav a[aria-current="page"] { border-bottom-color: var(--color-accent); color: var(--color-primary); }
-      .site-header nav a:hover { color: var(--color-accent-dark); }
+      .aox-topbar nav a[aria-current="page"] { border-bottom-color: var(--color-accent); color: var(--color-primary); }
+      .aox-topbar nav a:hover { color: var(--color-accent-dark); }
 
       .btn-primary {
         display: inline-block;
@@ -336,25 +336,25 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site.url).toString
         padding: 2.5rem 0 5rem;
       }
 
-      .site-footer {
+      .aox-foot {
         background: var(--color-primary);
         color: #d6d3cc;
         padding: 3rem 0 1.5rem;
         margin-top: 4rem;
       }
-      .site-footer h3 { color: var(--color-accent); font-size: 0.9375rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
-      .site-footer a { color: #ece9e2; text-decoration: underline; text-underline-offset: 2px; }
-      .site-footer a:hover { color: var(--color-accent); }
-      .site-footer hr { border: none; border-top: 1px solid rgba(255,255,255,0.15); margin: 2rem 0 1.5rem; }
-      .footer-grid {
+      .aox-foot h3 { color: var(--color-accent); font-size: 0.9375rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+      .aox-foot a { color: #ece9e2; text-decoration: underline; text-underline-offset: 2px; }
+      .aox-foot a:hover { color: var(--color-accent); }
+      .aox-foot hr { border: none; border-top: 1px solid rgba(255,255,255,0.15); margin: 2rem 0 1.5rem; }
+      .aox-footcols {
         display: grid;
         gap: 2.5rem;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       }
-      .footer-grid ul { list-style: none; padding: 0; }
-      .footer-grid ul li { margin-bottom: 0.5rem; font-size: 0.9375rem; }
-      .footer-grid p { font-size: 0.9375rem; }
-      .footer-grid address { font-style: normal; font-size: 0.9375rem; line-height: 1.7; }
+      .aox-footcols ul { list-style: none; padding: 0; }
+      .aox-footcols ul li { margin-bottom: 0.5rem; font-size: 0.9375rem; }
+      .aox-footcols p { font-size: 0.9375rem; }
+      .aox-footcols address { font-style: normal; font-size: 0.9375rem; line-height: 1.7; }
       .disclaimer {
         font-size: 0.8125rem;
         background: rgba(255,255,255,0.05);
@@ -365,20 +365,20 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site.url).toString
       .copy { font-size: 0.75rem; color: #9a978f; text-align: center; margin: 0; }
 
       /* ---- wspólne style stron (hero / prose / cta / siatki) ---- */
-      .eyebrow {
+      .aox-kicker {
         text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8125rem;
         color: var(--color-accent-dark); margin: 0; font-weight: 700;
       }
-      .page-hero {
+      .aox-banner {
         background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
         color: white; padding: 3.5rem 0 3rem; margin-bottom: 2.5rem;
       }
-      .page-hero h1 { color: white; margin-top: 0.5rem; }
-      .page-hero .eyebrow { color: var(--color-accent); }
-      .page-hero .lead { font-size: 1.1875rem; color: #e5e2da; max-width: 56rem; margin: 1rem 0 1.75rem; }
-      .page-hero .lead a { color: var(--color-accent); }
-      .page-hero .btn-outline { color: var(--color-accent) !important; border-color: var(--color-accent); }
-      .page-hero .btn-outline:hover { background: var(--color-accent); color: var(--color-primary) !important; }
+      .aox-banner h1 { color: white; margin-top: 0.5rem; }
+      .aox-banner .aox-kicker { color: var(--color-accent); }
+      .aox-banner .lead { font-size: 1.1875rem; color: #e5e2da; max-width: 56rem; margin: 1rem 0 1.75rem; }
+      .aox-banner .lead a { color: var(--color-accent); }
+      .aox-banner .btn-outline { color: var(--color-accent) !important; border-color: var(--color-accent); }
+      .aox-banner .btn-outline:hover { background: var(--color-accent); color: var(--color-primary) !important; }
       .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 
       .prose { max-width: 50rem; }
@@ -392,43 +392,43 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site.url).toString
         box-shadow: 0 1px 3px rgba(0,0,0,0.05);
       }
 
-      .pillar-grid, .intro-grid {
+      .aox-cardgrid, .intro-grid {
         display: grid; gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         margin: 1.5rem 0 2rem;
       }
-      .pillar {
+      .aox-card {
         background: var(--color-card); padding: 1.5rem; border-radius: 6px;
         text-decoration: none; color: var(--color-fg);
         border: 1px solid var(--color-border); transition: all 0.2s; display: block;
       }
-      .pillar:hover { border-color: var(--color-accent); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-      .pillar-num { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent-dark); letter-spacing: 0.1em; }
-      .pillar h3 { margin: 0.4rem 0 0.4rem; font-size: 1.0625rem; }
-      .pillar p { font-size: 0.9375rem; color: var(--color-muted); margin: 0; }
+      .aox-card:hover { border-color: var(--color-accent); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+      .aox-cardnum { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent-dark); letter-spacing: 0.1em; }
+      .aox-card h3 { margin: 0.4rem 0 0.4rem; font-size: 1.0625rem; }
+      .aox-card p { font-size: 0.9375rem; color: var(--color-muted); margin: 0; }
 
-      .cta-section {
+      .aox-cta {
         background: var(--color-primary); color: white;
         padding: 3rem 0; margin-top: 3.5rem;
       }
-      .cta-section h2 { color: white; margin-top: 0; }
-      .cta-section p { color: #e5e2da; max-width: 56rem; font-size: 1.0625rem; }
+      .aox-cta h2 { color: white; margin-top: 0; }
+      .aox-cta p { color: #e5e2da; max-width: 56rem; font-size: 1.0625rem; }
 
-      .post-grid { list-style: none; padding: 0; display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-      .post-grid > li { background: var(--color-card); padding: 1.5rem; border-radius: 6px; border-left: 3px solid var(--color-accent); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-      .post-grid h3 { margin: 0.5rem 0 0.75rem; font-size: 1.125rem; }
-      .post-grid h3 a { text-decoration: none; }
-      .post-meta { font-size: 0.75rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
-      .post-meta .category { color: var(--color-accent-dark); font-weight: 700; }
-      .section-header { display: flex; justify-content: space-between; align-items: baseline; margin: 2.5rem 0 1.25rem; flex-wrap: wrap; gap: 1rem; }
-      .section-header h2 { margin: 0; }
+      .aox-feed { list-style: none; padding: 0; display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+      .aox-feed > li { background: var(--color-card); padding: 1.5rem; border-radius: 6px; border-left: 3px solid var(--color-accent); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+      .aox-feed h3 { margin: 0.5rem 0 0.75rem; font-size: 1.125rem; }
+      .aox-feed h3 a { text-decoration: none; }
+      .aox-feedmeta { font-size: 0.75rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+      .aox-feedmeta .category { color: var(--color-accent-dark); font-weight: 700; }
+      .aox-sechead { display: flex; justify-content: space-between; align-items: baseline; margin: 2.5rem 0 1.25rem; flex-wrap: wrap; gap: 1rem; }
+      .aox-sechead h2 { margin: 0; }
       .see-all { font-weight: 600; text-decoration: none; }
 
       @media (max-width: 768px) {
         h1 { font-size: 2rem; }
         h2 { font-size: 1.5rem; }
-        .site-header .container { gap: 1rem; }
-        .site-header nav ul { gap: 0.875rem; }
+        .aox-topbar .container { gap: 1rem; }
+        .aox-topbar nav ul { gap: 0.875rem; }
       }
     </style>
   </body>

@@ -11,9 +11,9 @@ const latestPosts = allPosts.slice(0, 4);
 ---
 
 <BaseLayout>
-  <section class="page-hero">
+  <section class="aox-banner">
     <div class="container">
-      <p class="eyebrow">All-on-4 · All-on-6 · All-on-X · cała Polska</p>
+      <p class="aox-kicker">All-on-4 · All-on-6 · All-on-X · cała Polska</p>
       <h1>Stałe zęby na implantach — nowy uśmiech w jeden dzień</h1>
       <p class="lead">
         Bezzębie albo zniszczone uzębienie nie muszą oznaczać ruchomej protezy.
@@ -33,17 +33,17 @@ const latestPosts = allPosts.slice(0, 4);
 
   <section class="container">
     <div class="intro-grid">
-      <article class="pillar">
+      <article class="aox-card">
         <h3>All-on-4 — 4 implanty, cały łuk</h3>
         <p>Stały most podparty na 4 implantach (2 proste + 2 pochylone). Sprawdzony protokół, często z zębami tymczasowymi tego samego dnia.</p>
         <a href="/all-on-4">All-on-4 w szczegółach →</a>
       </article>
-      <article class="pillar">
+      <article class="aox-card">
         <h3>All-on-6 — 6 implantów, więcej stabilności</h3>
         <p>Lepsze rozłożenie sił i bufor bezpieczeństwa — szczególnie w szczęce i przy silnym zgryzie. Kiedy 6 ma przewagę nad 4.</p>
         <a href="/all-on-6">All-on-6 w szczegółach →</a>
       </article>
-      <article class="pillar">
+      <article class="aox-card">
         <h3>Zęby w jeden dzień</h3>
         <p>Obciążenie natychmiastowe — jak to możliwe, dla kogo, i co realnie dzieje się w „tym jednym dniu".</p>
         <a href="/zeby-w-jeden-dzien">Zęby w jeden dzień →</a>
@@ -53,34 +53,34 @@ const latestPosts = allPosts.slice(0, 4);
 
   <section class="container">
     <h2>Najważniejsze tematy</h2>
-    <div class="pillar-grid">
-      <a href="/all-on-x" class="pillar">
-        <span class="pillar-num">01</span>
+    <div class="aox-cardgrid">
+      <a href="/all-on-x" class="aox-card">
+        <span class="aox-cardnum">01</span>
         <h3>All-on-X — co to jest</h3>
         <p>Pojęcie zbiorcze i porównanie wariantów: All-on-4 vs All-on-6 vs proteza vs most.</p>
       </a>
-      <a href="/all-on-4" class="pillar">
-        <span class="pillar-num">02</span>
+      <a href="/all-on-4" class="aox-card">
+        <span class="aox-cardnum">02</span>
         <h3>All-on-4</h3>
         <p>Cały łuk na 4 implantach — wskazania, przebieg, obciążenie natychmiastowe, trwałość.</p>
       </a>
-      <a href="/all-on-6" class="pillar">
-        <span class="pillar-num">03</span>
+      <a href="/all-on-6" class="aox-card">
+        <span class="aox-cardnum">03</span>
         <h3>All-on-6</h3>
         <p>6 implantów — większa stabilność i rozłożenie obciążeń. Dla kogo lepszy wybór.</p>
       </a>
-      <a href="/zeby-w-jeden-dzien" class="pillar">
-        <span class="pillar-num">04</span>
+      <a href="/zeby-w-jeden-dzien" class="aox-card">
+        <span class="aox-cardnum">04</span>
         <h3>Zęby w jeden dzień</h3>
         <p>Protokół obciążenia natychmiastowego — warunki, korzyści, czego się spodziewać.</p>
       </a>
-      <a href="/cennik" class="pillar">
-        <span class="pillar-num">05</span>
+      <a href="/cennik" class="aox-card">
+        <span class="aox-cardnum">05</span>
         <h3>Cennik All-on-4 / All-on-6</h3>
         <p>Co składa się na cenę, od czego zależy, dlaczego warianty różnią się kosztem.</p>
       </a>
-      <a href="/o-autorze" class="pillar">
-        <span class="pillar-num">06</span>
+      <a href="/o-autorze" class="aox-card">
+        <span class="aox-cardnum">06</span>
         <h3>O autorze</h3>
         <p>Dr Marcin Nowosielski, M.Sc. RWTH Aachen — implantolog, autor książki branżowej.</p>
       </a>
@@ -89,15 +89,15 @@ const latestPosts = allPosts.slice(0, 4);
 
   {latestPosts.length > 0 && (
     <section class="container">
-      <header class="section-header">
+      <header class="aox-sechead">
         <h2>Najnowsze artykuły</h2>
         <a class="see-all" href="/blog">Wszystkie →</a>
       </header>
-      <ul class="post-grid">
+      <ul class="aox-feed">
         {latestPosts.map((post) => (
           <li>
             <article>
-              <p class="post-meta">
+              <p class="aox-feedmeta">
                 <span class="category">{categoryMeta[post.data.category].label}</span>
                 <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
               </p>
@@ -110,7 +110,7 @@ const latestPosts = allPosts.slice(0, 4);
     </section>
   )}
 
-  <section class="cta-section">
+  <section class="aox-cta">
     <div class="container">
       <h2>Bezpłatna konsultacja — sprawdź, czy kwalifikujesz się do All-on-4 / All-on-6</h2>
       <p>

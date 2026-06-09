@@ -1,0 +1,52 @@
+---
+// Reużywalny blok FAQ: widoczny accordion (<details>) + FAQPage JSON-LD.
+// Markup schema = widoczna treść (wymóg Google). Odpowiedzi: zwykły tekst.
+interface FaqItem { q: string; a: string; }
+interface Props { items: FaqItem[]; heading?: string; }
+const { items, heading = 'Najczęstsze pytania' } = Astro.props;
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map((it) => ({
+    '@type': 'Question',
+    name: it.q,
+    acceptedAnswer: { '@type': 'Answer', text: it.a },
+  })),
+};
+---
+
+<section class="faq container">
+  <h2>{heading}</h2>
+  <div class="faq-list">
+    {items.map((it) => (
+      <details class="faq-item">
+        <summary>{it.q}</summary>
+        <p>{it.a}</p>
+      </details>
+    ))}
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<style>
+  .faq { margin-top: 2.5rem; }
+  .faq-list { max-width: 56rem; }
+  .faq-item {
+    border: 1px solid var(--color-border, #d9d5cc);
+    border-radius: 8px; margin-bottom: 0.75rem; background: var(--color-card, #fff);
+    overflow: hidden;
+  }
+  .faq-item summary {
+    cursor: pointer; padding: 1rem 1.25rem; font-weight: 700;
+    list-style: none; position: relative; padding-right: 2.5rem;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+'; position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%);
+    font-size: 1.25rem; font-weight: 400; color: var(--color-accent-dark, #9c7d44);
+  }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item p { margin: 0; padding: 0 1.25rem 1.1rem; color: var(--color-fg, #1c1d20); }
+</style>

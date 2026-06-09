@@ -1,6 +1,54 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Faq from '../components/Faq.astro';
 import { site } from '../data/site';
+
+const faqItems = [
+  {
+    q: 'Czym różni się All-on-4 od All-on-6?',
+    a: 'To liczba implantów podtrzymujących stały most w jednym łuku — odpowiednio cztery lub sześć. All-on-6 daje większy rozkład sił i bywa wskazany przy lepszej ilości kości lub w szczęce; All-on-4 wykorzystuje implanty pochylone i często pozwala uniknąć rozległej augmentacji. O wyborze decyduje ocena kości na podstawie tomografii CBCT.',
+  },
+  {
+    q: 'Czy zęby zakłada się tego samego dnia?',
+    a: 'W wielu przypadkach tak — to obciążenie natychmiastowe: po wszczepieniu implantów zakładany jest stały most tymczasowy, więc pacjent nie chodzi bez zębów. Most docelowy (np. z cyrkonu) wykonuje się po wygojeniu. Warunkiem jest odpowiednia stabilizacja implantów, ocena indywidualna.',
+  },
+  {
+    q: 'Jakich systemów implantów używacie?',
+    a: 'Pracujemy na premium systemach Straumann i Nobel Biocare. W pełnołukowej odbudowie ma to znaczenie: udokumentowana trwałość, precyzja połączenia implant–łącznik i dostępność komponentów także za kilkanaście lat.',
+  },
+  {
+    q: 'Jak długo wytrzymuje most na implantach?',
+    a: 'Implanty przy prawidłowej higienie i kontrolach mogą służyć wiele lat — często ponad 20. Trwałość zależy od systemu implantów, materiału mostu, higieny, nawyków (np. bruksizm) i regularnych wizyt kontrolnych. Most tymczasowy z czasem wymieniany jest na docelowy.',
+  },
+  {
+    q: 'Czy All-on-4 jest możliwy przy zaniku kości?',
+    a: 'Często tak — All-on-4 wykorzystuje implanty pochylone, które omijają obszary największego zaniku, co nierzadko pozwala uniknąć rozległej augmentacji. W skrajnym zaniku rozważa się implanty zygomatyczne. Decyzję podejmuje się po analizie CBCT.',
+  },
+  {
+    q: 'Czy zabieg boli?',
+    a: 'Zabieg wykonywany jest w znieczuleniu, więc jest bezbolesny. Po nim mogą wystąpić obrzęk i dyskomfort przez kilka dni, które kontroluje się standardowymi lekami. Szczegółowe zalecenia pozabiegowe pacjent otrzymuje przed leczeniem.',
+  },
+];
+
+const medicalSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  '@id': `${site.url}/all-on-x#webpage`,
+  url: `${site.url}/all-on-x`,
+  name: 'All-on-X — stały most na implantach (All-on-4 / All-on-6)',
+  inLanguage: 'pl-PL',
+  lastReviewed: '2026-06-01',
+  author: { '@id': site.author.canonicalId },
+  about: {
+    '@type': 'MedicalProcedure',
+    name: 'All-on-X — pełnołukowa odbudowa na implantach (All-on-4 / All-on-6)',
+    procedureType: 'https://schema.org/SurgicalProcedure',
+    howPerformed:
+      'Wszczepienie 4–6 implantów w jednym łuku i osadzenie stałego mostu; często z obciążeniem natychmiastowym (stały most tymczasowy tego samego dnia), most docelowy po wygojeniu.',
+    bodyLocation: 'Szczęka lub żuchwa',
+    followup: 'Higiena, kontrole okresowe, wymiana mostu tymczasowego na docelowy.',
+  },
+};
 ---
 
 <BaseLayout
@@ -104,6 +152,10 @@ import { site } from '../data/site';
       <li>osoby z zanikiem kości — często bez konieczności rozległej augmentacji (implanty pochylone).</li>
     </ul>
   </section>
+
+  <Faq items={faqItems} heading="All-on-X — najczęstsze pytania" />
+
+  <script type="application/ld+json" set:html={JSON.stringify(medicalSchema)} />
 
   <section class="cta-section">
     <div class="container">

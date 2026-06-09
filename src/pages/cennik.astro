@@ -1,6 +1,26 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Faq from '../components/Faq.astro';
 import { site } from '../data/site';
+
+const faqItems = [
+  {
+    q: 'Dlaczego ceny All-on-4 tak bardzo się różnią?',
+    a: 'Największy wpływ ma system implantów (premium, np. Straumann/Nobel Biocare, vs tańsze), materiał mostu docelowego (akryl/kompozyt vs cyrkon), liczba implantów (4 vs 6) oraz zakres (ekstrakcje, ewentualna augmentacja, jeden czy oba łuki). Bardzo niska cena zwykle oznacza tańszy system i kompromisy ujawniające się po latach.',
+  },
+  {
+    q: 'Co obejmuje cena leczenia?',
+    a: 'Zwykle: diagnostykę (CBCT, planowanie cyfrowe), implanty, most tymczasowy przy obciążeniu natychmiastowym, most docelowy oraz wizyty kontrolne i opiekę pozabiegową. Dokładny zakres i kosztorys ustalamy indywidualnie po badaniu — przed rozpoczęciem leczenia.',
+  },
+  {
+    q: 'Czy płatność można rozłożyć na raty?',
+    a: 'Tak, dostępne jest rozłożenie płatności / finansowanie ratalne. Szczegóły i warianty omawiamy indywidualnie podczas konsultacji.',
+  },
+  {
+    q: 'Czy warto wybierać najtańszą ofertę All-on-4?',
+    a: 'Pełnołukowa odbudowa ma służyć dekady i przenosić pełne obciążenie żucia, dlatego nie jest to miejsce na oszczędności. Markowe implanty, cyfrowe planowanie i trwały most kosztują więcej, ale przekładają się na przewidywalność i trwałość — czyli realny koszt w czasie, nie tylko cenę na starcie.',
+  },
+];
 ---
 
 <BaseLayout
@@ -97,6 +117,8 @@ import { site } from '../data/site';
       opcje omawiamy indywidualnie podczas konsultacji.
     </p>
   </section>
+
+  <Faq items={faqItems} heading="Cennik All-on-4 / All-on-6 — najczęstsze pytania" />
 
   <section class="cta-section">
     <div class="container">
